@@ -1,0 +1,238 @@
+.nav-stl {
+  display: flex;
+  justify-content: center;
+  background-color: $primary-200;
+}
+
+.nav-stl a {
+  color: $neutral-900;
+  text-decoration: none;
+  display: block;
+  font-weight: 500;
+  background-color: $primary-200;
+}
+
+.nav-stl a:hover {
+  background-color: $primary-300;
+}
+
+.hero-section {
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner.png?raw=true');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 289px;
+  padding-bottom: 288px;
+  padding-left: 200px;
+}
+
+@media (max-width:576px) {
+  .hero-section {
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-sm.png?raw=true');
+    padding-top: 155px;
+    padding-bottom: 155px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.index-h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.txt-en {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width:576px) {
+  .index-h1 {
+    font-size: 48px;
+  }
+
+  .txt-en {
+    font-size: 20px;
+  }
+
+}
+
+.txt-a-c {
+  text-align: center;
+}
+
+.txt-price {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.product {
+  position: relative;
+
+  .product-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 8px 12px;
+    background-color: $primary-100;
+    font-size: 14px;
+    color: $primary-400;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-md-row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+
+  .product-md-col {
+    min-width: 316px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+.banner {
+  text-align: center;
+  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded.png?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 100px 0;
+  position: relative;
+
+  .star-img {
+    position: absolute;
+    width: 48px;
+    top: 68px;
+    left: calc(50% - 397px);
+  }
+
+  .sparkle-img {
+    position: absolute;
+    width: 76px;
+    bottom: 132px;
+    right: calc(50% - 357px);
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    padding: 64px 0;
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/2025-week3-4/banner-co-branded-sm.png?raw=true');
+    overflow: hidden;
+
+    .btn {
+      padding: 12px 24px;
+    }
+
+    .star-img {
+      top: 32px;
+      left: -20px;
+    }
+
+    .sparkle-img {
+      bottom: 104px;
+      right: -28px;
+    }
+  }
+}
+
+
+.category {
+  position: relative;
+  overflow: hidden;
+
+  a {
+    display: block;
+    position: relative;
+
+    .category-image {
+      display: block;
+      width: 100%;
+      transition: filter 0.4s ease;
+    }
+
+    .category-text {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: white;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      .category-image {
+        filter: brightness(0.6);
+      }
+
+      .category-text {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.inspiration {
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -4px;
+  }
+
+  &-col-4 {
+    width: calc(100% / 12 * 4);
+    padding: 4px;
+  }
+
+  &-col-6 {
+    width: calc(100% / 12 * 6);
+    padding: 4px;
+  }
+
+  &-col-12 {
+    width: 100%;
+    padding: 4px;
+  }
+}
+
+
+
+@media (max-width: 767px) {
+  .inspiration-row {
+    flex-wrap: nowrap;
+    margin: 0 -8px;
+
+    img {
+      min-width: 300px;
+    }
+  }
+
+  .inspiration-col-4,
+  .inspiration-col-6,
+  .inspiration-col-12 {
+    width: unset; // 清除樣式
+    padding: 0 8px;
+  }
+}
+
+.badge-hot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: $primary-100;
+  padding: 12px 8px;
+  font-size: 14px;
+}
